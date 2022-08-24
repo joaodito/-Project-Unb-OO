@@ -2,60 +2,57 @@ package model;
 
 import java.util.*;
 
-public class User {
+public class Usuario {
 
 	//Attributes
-	private String nameUser;
-	private String emailUser;
-	private int cpfUser;
+	private String nomeUsuario;
+	private String emailUsuario;
+	private int cpfUsuario;
 	
-	//Create the list of users
-	private static List <User> user;
+	public static List<Usuario> usuario;
+	
 	
 	//Reference to this attributes
-	public User (String nameUser, String emailUser, int cpfUser){
-		this.nameUser = nameUser;
-		this.emailUser = emailUser;
-		this.cpfUser = cpfUser;
+	public Usuario (String nomeUsuario, String emailUsuario, int cpfUsuario){
+		this.nomeUsuario = nomeUsuario;
+		this.emailUsuario = emailUsuario;
+		this.cpfUsuario = cpfUsuario;
 	}
 	
 	//Constructor of user in a LinkedList
-	public User(){
-		user = new LinkedList<User>();
+	public Usuario(){
+		usuario = new LinkedList<>();
 	}
 	
-	
-	//Sets and gets of users
-	public void setNameUser(String nameUser) {
-		this.nameUser = nameUser;
-	}
-	
-	public void setCpfUser(int cpfUser) {
-		this.cpfUser = cpfUser;
-	}
-	
-	public void setEmailUser(String emailUser) {
-		this.emailUser = emailUser;
-	}
-	
-	public String getNameUser() {
-		return nameUser;
-	}
-	
-	public int getCpfUser() {
-		return cpfUser;
-	}
-	
-	public String getEmailUser() {
-		return emailUser;
-	}	
-	
-	//Constructor of a user
-	public void criarUser() {
-		User u = new User (nameUser, emailUser, cpfUser);
-		user.add(u);
+	public void cadastraUsuario(){
+		Usuario u = new Usuario(nomeUsuario, emailUsuario, cpfUsuario);
+		usuario.add(u);
+	}		
 		
-	}
+		//Sets and gets of users
+		public void setNomeUsuario (String nomeUsuario) {
+				this.nomeUsuario = nomeUsuario;
+			}
+		
+		public void setCpfUsuario(int cpfUsuario) {
+				this.cpfUsuario = cpfUsuario;
+			}
+			
+		public void setEmailUsuario(String emailUsuario) {
+				this.emailUsuario = emailUsuario;
+			}
+		
+		public String getNomeUsuario() {
+				return nomeUsuario;
+			}
+		
+		public int getCpfUsuario() {
+				return cpfUsuario;
+			}
+		
+		public String getEmailUsuario() {
+				return emailUsuario;
+			}	
+	}	
 
-}
 
